@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Decagon Android 007</string>
+    <string name="enter_your_email">Enter your Email</string>
+    <string name="enter_your_name">Enter your Name</string>
+    <string name="comment">Comment</string>
+    <string name="add_post">Add Post</string>
 </resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/commentdialog_imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/commentdialog_nametextview"
+        app:layout_constraintDimensionRatio="1.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.3"
+        tools:srcCompat="@drawable/ic_baseline_tag_faces_24" />
+
+    <EditText
+        android:id="@+id/commentdialog_emailtextview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/enter_your_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/comentdialog_editTextTextMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/commentdialog_nametextview"
+        app:layout_constraintStart_toStartOf="@+id/commentdialog_nametextview"
+        app:layout_constraintTop_toBottomOf="@+id/commentdialog_nametextview" />
+
+    <EditText
+        android:id="@+id/commentdialog_nametextview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="@string/enter_your_name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/commentdialog_emailtextview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentdialog_imageView" />
+
+    <EditText
+        android:id="@+id/comentdialog_editTextTextMultiLine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/comment"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/commentdialog_emailtextview"
+        app:layout_constraintStart_toStartOf="@+id/commentdialog_emailtextview"
+        app:layout_constraintTop_toBottomOf="@+id/commentdialog_emailtextview" />
+
+    <TextView
+        android:id="@+id/add_comment_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Add Comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comentdialog_editTextTextMultiLine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
