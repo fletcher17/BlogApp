@@ -1,14 +1,16 @@
 package com.decagon.android.sq007.ViewModel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import android.app.Application
+import androidx.lifecycle.*
 import com.decagon.android.sq007.Model.CommentClass
 import com.decagon.android.sq007.Repository.MainRepository
+import com.decagon.android.sq007.data.UserDataBase
 import kotlinx.coroutines.launch
 
-class CommentViewModel : ViewModel() {
+class CommentViewModel(application: Application) : AndroidViewModel(application) {
+
+    val userDao = UserDataBase.getDataBase(application).userDao()
+    var MainRepository : MainRepository = MainRepository(userDao)
 
     var id = 0
     var commentDatas: MutableList<CommentClass> = mutableListOf()
@@ -30,6 +32,8 @@ class CommentViewModel : ViewModel() {
     fun addCommentData(comment: CommentClass) {
         _allCommentData.value?.add(comment)
     }
+
+
 
 //    fun addCommentsFromRoomDataBase(commentFromDB: CommentClass) {
 //

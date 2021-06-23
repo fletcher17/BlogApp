@@ -2,13 +2,15 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
 
     <TextView
         android:id="@+id/comment_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:textAppearance="?android:textAppearanceSmall"
         android:text="Name"
         android:layout_marginLeft="20dp"/>
@@ -17,6 +19,7 @@
         android:id="@+id/comment_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#E53935"
         android:textAppearance="?android:textAppearanceSmall"
         android:text="Email"
         android:layout_marginLeft="20dp"/>
@@ -28,6 +31,8 @@
         android:layout_weight="1"
         android:textAppearance="?android:textAppearanceMedium"
         android:text="body"
+        android:textColor="@color/black"
+        android:textStyle="italic"
         android:layout_marginLeft="20dp"/>
 
     <LinearLayout
