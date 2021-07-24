@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity(), PostClickListener {
     private lateinit var disposable: Disposable
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -52,7 +54,6 @@ class MainActivity : AppCompatActivity(), PostClickListener {
         fabButton.setOnClickListener {
             PostUser()
         }
-
 
         //Initializing the view model
         viewmodel = ViewModelProvider(this).get(MainViewModel::class.java)
